@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-
+#import <XDUserSDK/XDUserManager.h>
 @interface ViewController ()
 
 @end
@@ -15,6 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [XDUserManager start];
     // Do any additional setup after loading the view.
 }
 

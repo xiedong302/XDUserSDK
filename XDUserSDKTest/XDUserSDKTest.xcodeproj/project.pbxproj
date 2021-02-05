@@ -14,7 +14,7 @@
 		FC1B565B25C8DAE1008E85F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1B565A25C8DAE1008E85F5 /* Assets.xcassets */; };
 		FC1B565E25C8DAE1008E85F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1B565C25C8DAE1008E85F5 /* LaunchScreen.storyboard */; };
 		FC1B566125C8DAE1008E85F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1B566025C8DAE1008E85F5 /* main.m */; };
-		FC57F85E25CBF1AE00A752E1 /* XDTAF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57F85D25CBF1AE00A752E1 /* XDTAF.framework */; };
+		FC3DAB1425CCD36A00E25067 /* XDTAF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DAB1325CCD36A00E25067 /* XDTAF.framework */; };
 		FC57F86825CBF50700A752E1 /* XDUserSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57F86725CBF50700A752E1 /* XDUserSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		FC1B565D25C8DAE1008E85F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC1B565F25C8DAE1008E85F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1B566025C8DAE1008E85F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC57F85D25CBF1AE00A752E1 /* XDTAF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XDTAF.framework; sourceTree = "<group>"; };
+		FC3DAB1325CCD36A00E25067 /* XDTAF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XDTAF.framework; path = ../DependencyFrameworks/XDTAF.framework; sourceTree = "<group>"; };
 		FC57F86725CBF50700A752E1 /* XDUserSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XDUserSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,8 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3DAB1425CCD36A00E25067 /* XDTAF.framework in Frameworks */,
 				FC57F86825CBF50700A752E1 /* XDUserSDK.framework in Frameworks */,
-				FC57F85E25CBF1AE00A752E1 /* XDTAF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,6 @@
 		FC1B564D25C8DAE0008E85F5 /* XDUserSDKTest */ = {
 			isa = PBXGroup;
 			children = (
-				FC57F85C25CBF1AE00A752E1 /* DependencyFrameworks */,
 				FC1B564E25C8DAE0008E85F5 /* AppDelegate.h */,
 				FC1B564F25C8DAE0008E85F5 /* AppDelegate.m */,
 				FC1B565125C8DAE0008E85F5 /* SceneDelegate.h */,
@@ -84,18 +83,10 @@
 			path = XDUserSDKTest;
 			sourceTree = "<group>";
 		};
-		FC57F85C25CBF1AE00A752E1 /* DependencyFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC57F85D25CBF1AE00A752E1 /* XDTAF.framework */,
-			);
-			name = DependencyFrameworks;
-			path = ../../DependencyFrameworks;
-			sourceTree = "<group>";
-		};
 		FC57F86625CBF50700A752E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC3DAB1325CCD36A00E25067 /* XDTAF.framework */,
 				FC57F86725CBF50700A752E1 /* XDUserSDK.framework */,
 			);
 			name = Frameworks;

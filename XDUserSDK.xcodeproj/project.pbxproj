@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC1B563A25C8DA9B008E85F5 /* XDUserSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FC1B563825C8DA9B008E85F5 /* XDUserSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC1B566A25C8DB28008E85F5 /* Configs.XDUserSDK.Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.Debug.xcconfig */; };
-		FC1B566E25C8DB3E008E85F5 /* Configs.XDUserSDK.Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FC1B566D25C8DB3E008E85F5 /* Configs.XDUserSDK.Release.xcconfig */; };
+		FC1B566A25C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig */; };
 		FC57F86125CBF37C00A752E1 /* XDUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FC57F85F25CBF37C00A752E1 /* XDUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC57F86225CBF37C00A752E1 /* XDUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC57F86025CBF37C00A752E1 /* XDUserManager.m */; };
 /* End PBXBuildFile section */
@@ -18,8 +17,7 @@
 		FC1B563525C8DA9B008E85F5 /* XDUserSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XDUserSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1B563825C8DA9B008E85F5 /* XDUserSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDUserSDK.h; sourceTree = "<group>"; };
 		FC1B563925C8DA9B008E85F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.XDUserSDK.Debug.xcconfig; sourceTree = "<group>"; };
-		FC1B566D25C8DB3E008E85F5 /* Configs.XDUserSDK.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.XDUserSDK.Release.xcconfig; sourceTree = "<group>"; };
+		FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configs.XDUserSDK.xcconfig; sourceTree = "<group>"; };
 		FC57F85F25CBF37C00A752E1 /* XDUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDUserManager.h; sourceTree = "<group>"; };
 		FC57F86025CBF37C00A752E1 /* XDUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDUserManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +64,7 @@
 		FC1B566825C8DB06008E85F5 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.Debug.xcconfig */,
-				FC1B566D25C8DB3E008E85F5 /* Configs.XDUserSDK.Release.xcconfig */,
+				FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -141,8 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1B566E25C8DB3E008E85F5 /* Configs.XDUserSDK.Release.xcconfig in Resources */,
-				FC1B566A25C8DB28008E85F5 /* Configs.XDUserSDK.Debug.xcconfig in Resources */,
+				FC1B566A25C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +276,7 @@
 		};
 		FC1B563E25C8DA9B008E85F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -305,6 +302,7 @@
 		};
 		FC1B563F25C8DA9B008E85F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1B566925C8DB28008E85F5 /* Configs.XDUserSDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -312,6 +310,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/DependencyFrameworks";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = XDUserSDK/Info.plist;
